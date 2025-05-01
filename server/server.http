@@ -1,0 +1,30 @@
+@server_HostAddress = http://localhost:5280
+
+GET {{server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+
+###
+POST {{server_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "huangyou1",
+  "password": "123"
+}
+
+
+###
+POST {{server_HostAddress}}/api/todo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Imh1YW5neW91MSIsIlVzZXJJZCI6IjIiLCJuYmYiOjE3NDU2MTI0MzAsImV4cCI6MTc0NTYxNjAzMCwiaWF0IjoxNzQ1NjEyNDMwLCJpc3MiOiJUYXNrTWFzdGVySXNzdWVyIiwiYXVkIjoiVGFza01hc3RlckF1ZGllbmNlIn0.c4K-jmN4cPqezSgvdCXjGhFZG23vb1nhpxj6Wfsjzxo
+
+{
+  "title": "string",
+  "isDone": true,
+  "userId": 2
+}
+###
+GET {{server_HostAddress}}/api/todo/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Imh1YW5neW91MSIsIlVzZXJJZCI6IjIiLCJuYmYiOjE3NDU2MTY0MzYsImV4cCI6MTc0NTYyMDAzNiwiaWF0IjoxNzQ1NjE2NDM2LCJpc3MiOiJUYXNrTWFzdGVySXNzdWVyIiwiYXVkIjoiVGFza01hc3RlckF1ZGllbmNlIn0.V9sAdfcQbetKEO8pKfQo2v6G9sFxZEe8bujHLCZ1RcY
+Accept: application/json

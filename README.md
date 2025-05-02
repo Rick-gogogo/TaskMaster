@@ -1,8 +1,8 @@
 A Task todo app
 
-Backend: ASP.NET Core (.NET 8 SDK）
-Frontend: React 19.0.0
-Database: SQL Server 2017
+- Backend: ASP.NET Core (.NET 8 SDK）
+- Frontend: React 19.0.0
+- Database: SQL Server 2017
 
 Functionality
 - User Register / Login ( JWT Authentication)
